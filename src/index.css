@@ -1,0 +1,166 @@
+* {
+    font-family: 'Silkscreen', cursive;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    background-color: #000;
+    color: #fff;
+}
+
+/* div {
+    border: 1px solid white;
+} */
+
+.gameinfo-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.first_info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.second_info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gameoptions-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.options1-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.tittle-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reset-button {
+    border: none;
+    background-color: yellow;
+    width: 100px;
+    height: 50px;
+}
+
+.reset-button:hover {
+    cursor: pointer;
+    background: red;
+}
+
+/* estilo de los botones asignamos una imagen a cada uno */
+.paper {
+    background-image: url('./assets/paper.png');
+    background-size: cover;
+    font-size: 18px;
+}
+
+.scissors {
+    background-image: url('./assets/scissors.png');
+    background-size: cover;
+    font-size: 18px;
+}
+
+.rock {
+    background-image: url('./assets/rock.png');
+    background-size: cover;
+    font-size: 18px;
+}
+
+.noplaying {
+    font-size: 30px;
+}
+
+/* Classes especiales si es que gana el jugador */
+
+.playerwin {
+    font-size: 30px;
+    color: green;
+    animation: youwinanimation alternate infinite 0.5s ease-in;
+}
+
+/* Classes especiales si es que gana la maquina */
+
+.machinewin {
+    font-size: 30px;
+    color: red;
+    animation: youloseanimation alternate infinite 0.5s ease-in;
+}
+
+/* you lose animation */
+
+@keyframes youloseanimation {
+    0% {
+        transform: translateY(10%);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+}
+
+/* you win animation */
+
+@keyframes youwinanimation {
+    0% {
+        transform: translateY(10%);
+        color: blue;
+    }
+    50% {
+        transform: translateY(-10%);
+        color: yellow;
+    }
+    100% {
+        color: green;
+    }
+}
+
+/* Iconos de las opciones seleccionadas */
+.papel {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url('./assets/paper.png');
+    background-size: cover;
+}
+
+.piedra {
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/rock.png');
+    background-size: cover;
+}
+
+.tijeras {
+    width: 50px;
+    height: 50px;
+    background-image: url('./assets/scissors.png');
+    background-size: cover;
+}
